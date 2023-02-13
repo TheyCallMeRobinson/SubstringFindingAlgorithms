@@ -3,7 +3,7 @@ package algorithms
 import Position
 import StringMatchAlgorithm
 
-class NaiveStringMatch : StringMatchAlgorithm{
+class NaiveStringMatch : StringMatchAlgorithm {
     override fun execute(baseString: String, substring: String): List<Position> {
         val positions = mutableListOf<Position>()
         for (i in 0..baseString.length - substring.length) {
