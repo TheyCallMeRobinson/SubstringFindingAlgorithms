@@ -1,4 +1,4 @@
-package algorithms
+package algorithms.stringmatch
 
 import Position
 import StringMatchAlgorithm

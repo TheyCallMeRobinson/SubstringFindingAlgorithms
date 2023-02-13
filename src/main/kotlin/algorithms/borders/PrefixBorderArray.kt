@@ -1,4 +1,4 @@
-package algorithms
+package algorithms.borders
 
 import Position
 import StringMatchAlgorithm
