@@ -1,10 +1,12 @@
 package algorithms.borders
 
-class PrefixBorderArrayModified(private val prefixBorderArray: PrefixBorderArray) {
+class PrefixBorderArrayModified(
+    private val prefixBorderArray: PrefixBorderArray = PrefixBorderArray(),
+) {
 
     fun execute(baseString: String): Array<Int> {
         val stringLength = baseString.length
-        val bpm = Array(stringLength) {0}
+        val bpm = Array(stringLength) { 0 }
         val bp = prefixBorderArray.execute(baseString)
         bpm[stringLength - 1] = bp[stringLength - 1]
 

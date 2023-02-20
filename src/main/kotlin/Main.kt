@@ -1,4 +1,5 @@
 import algorithms.borders.PrefixBorderArray
+import algorithms.stringmatch.KMPStringMatch
 import algorithms.stringmatch.NaiveStringMatch
 import algorithms.stringmatch.StringMatchAlgorithm
 import java.util.Scanner
@@ -27,7 +28,8 @@ fun naiveStringMatchOutput(scanner: Scanner) {
 
 fun prefixBorderArrayOutput(scanner: Scanner) {
     val inputString = scanner.nextLine(precedingString = "Input string: ")
-    val array = inputString.getBorderShiftArray()
+    val substring = scanner.nextLine(precedingString = "Input substring: ")
+    val array = inputString.indexOfStringMatch(substring, KMPStringMatch())
     for (i in array) {
         println(i)
     }
