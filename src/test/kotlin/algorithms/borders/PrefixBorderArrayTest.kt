@@ -3,9 +3,9 @@ package algorithms.borders
 import org.junit.Test
 
 
-internal class PrefixBorderArrayNaiveTest {
+internal class PrefixBorderArrayTest {
 
-    private val prefixBorderArrayNaive = PrefixBorderArrayNaive()
+    private val prefixBorderArray = PrefixBorderArray()
 
     @Test
     fun testLongString() {
@@ -23,6 +23,6 @@ internal class PrefixBorderArrayNaiveTest {
     }
 
     private fun isBorderArrayCorrect(testString: String, expectedBorderArray: Array<Int>): Boolean {
-        return expectedBorderArray.contentEquals(prefixBorderArrayNaive.execute(testString))
+        return expectedBorderArray.contentEquals(prefixBorderArray.execute(testString))
     }
 }

@@ -1,6 +1,6 @@
 package algorithms.borders
 
-class PrefixBorderArrayNaive{
+class PrefixBorderArray{
 
     fun execute(baseString: String): Array<Int> {
         val stringLength = baseString.length
