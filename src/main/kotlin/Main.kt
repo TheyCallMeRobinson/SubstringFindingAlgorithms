@@ -1,4 +1,5 @@
 import algorithms.stringmatch.NaiveStringMatch
+import algorithms.stringmatch.StringMatchAlgorithm
 import java.util.Scanner
 
 fun String.indexOf(substring: String, algorithm: StringMatchAlgorithm = NaiveStringMatch()): List<Position> {

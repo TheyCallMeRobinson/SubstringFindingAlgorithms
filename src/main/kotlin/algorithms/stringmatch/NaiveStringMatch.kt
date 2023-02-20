@@ -1,7 +1,6 @@
 package algorithms.stringmatch
 
 import Position
-import StringMatchAlgorithm
 
 class NaiveStringMatch : StringMatchAlgorithm {
     override fun execute(baseString: String, substring: String): List<Position> {
