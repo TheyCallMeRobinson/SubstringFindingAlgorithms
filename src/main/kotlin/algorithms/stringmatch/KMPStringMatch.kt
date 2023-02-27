@@ -1,11 +1,11 @@
 package algorithms.stringmatch
 
 import Position
-import algorithms.borders.PrefixBorderArray
+import algorithms.borders.PrefixBorderArrayModified
 
 class KMPStringMatch : StringMatchAlgorithm {
 
-    private val borderFinder: PrefixBorderArray = PrefixBorderArray()
+    private val borderFinder: PrefixBorderArrayModified = PrefixBorderArrayModified()
 
     override fun execute(baseString: String, substring: String): List<Position> {
         val borders = borderFinder.execute(substring)

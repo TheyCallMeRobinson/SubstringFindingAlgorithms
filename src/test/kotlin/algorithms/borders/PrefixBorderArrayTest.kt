@@ -2,7 +2,6 @@ package algorithms.borders
 
 import org.junit.Test
 
-
 internal class PrefixBorderArrayTest {
 
     private val prefixBorderArray = PrefixBorderArray()
