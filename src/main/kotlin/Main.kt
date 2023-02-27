@@ -2,6 +2,7 @@ import algorithms.borders.PrefixBorderArray
 import algorithms.stringmatch.KMPStringMatch
 import algorithms.stringmatch.NaiveStringMatch
 import algorithms.stringmatch.StringMatchAlgorithm
+import java.io.File
 import java.util.Scanner
 
 fun String.indexOfStringMatch(substring: String, algorithm: StringMatchAlgorithm = NaiveStringMatch()): List<Position> {
@@ -34,6 +35,17 @@ fun prefixBorderArrayOutput(scanner: Scanner) {
         println(i)
     }
 }
+
+fun prefixBorderArrayOutputFromFile(stringFileName: String, patternFileName: String)  {
+    val inputString = readFile(stringFileName)
+    val substring = readFile(patternFileName)
+    val array = inputString.indexOfStringMatch(substring, KMPStringMatch())
+    for (i in array) {
+        println(i)
+    }
+}
+
+fun readFile(fileName: String) = File(fileName).forEachLine { }.toString()
 
 fun main() {
     val scanner = Scanner(System.`in`)
