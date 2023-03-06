@@ -17,7 +17,6 @@ class PrefixBorderArrayModified(
                 bpm[i] = bp[i]
             }
         }
-
         return bpm
     }
 }
