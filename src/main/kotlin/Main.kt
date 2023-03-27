@@ -1,6 +1,7 @@
 import algorithms.borders.PrefixBorderArray
 import algorithms.stringmatch.KMPStringMatch
 import algorithms.stringmatch.NaiveStringMatch
+import algorithms.stringmatch.ShiftAndMatch
 import algorithms.stringmatch.StringMatchAlgorithm
 import java.io.File
 import java.util.Scanner
@@ -45,9 +46,18 @@ fun prefixBorderArrayOutputFromFile(stringFileName: String, patternFileName: Str
     }
 }
 
+fun prefixShiftAndOutput(scanner: Scanner) {
+    val inputString = scanner.nextLine(precedingString = "Input string: ")
+    val substring = scanner.nextLine(precedingString = "Input substring: ")
+    val array = inputString.indexOfStringMatch(substring, ShiftAndMatch())
+    for (i in array) {
+        println(i)
+    }
+}
+
 fun readFile(fileName: String) = File(fileName).forEachLine { }.toString()
 
 fun main() {
     val scanner = Scanner(System.`in`)
-    prefixBorderArrayOutput(scanner)
+    prefixShiftAndOutput(scanner)
 }
