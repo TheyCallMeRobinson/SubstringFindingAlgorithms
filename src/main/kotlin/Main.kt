@@ -1,4 +1,6 @@
 import algorithms.borders.PrefixBorderArray
+import algorithms.borders.createSuffixBorderArray
+import algorithms.stringmatch.BueraMuraMatch
 import algorithms.stringmatch.KMPStringMatch
 import algorithms.stringmatch.NaiveStringMatch
 import algorithms.stringmatch.ShiftAndMatch
@@ -55,9 +57,19 @@ fun prefixShiftAndOutput(scanner: Scanner) {
     }
 }
 
+fun prefixMurOutput(scanner: Scanner) {
+    val inputString = scanner.nextLine(precedingString = "Input string: ")
+    val substring = scanner.nextLine(precedingString = "Input substring: ")
+    val array = inputString.indexOfStringMatch(substring, BueraMuraMatch())
+    for (i in array) {
+        println(i)
+    }
+}
+
 fun readFile(fileName: String) = File(fileName).forEachLine { }.toString()
 
 fun main() {
     val scanner = Scanner(System.`in`)
-    prefixShiftAndOutput(scanner)
+    createSuffixBorderArray("abafwknfwabaaba")
+    prefixMurOutput(scanner)
 }
